@@ -15,5 +15,17 @@ interface Props {
  */
 export const ExamTile: FC<Props> = ({ examInfo, topicsInfo }) => {
   const { id: examID } = examInfo;
-  return <div></div>;
+
+  return (
+    <div>
+      {" "}
+      <p>`${examID}`</p>
+      {topicsInfo?.map((topic) => (
+        <div key={topic.id}>
+          {/* Add your topic content here */}
+          <p>{topic.title}</p>
+        </div>
+      ))}
+    </div>
+  );
 };
